@@ -1,0 +1,53 @@
+<books>
+    <book>
+        <name>xml book </name>
+
+        <author>author 1</author>
+        <pubDate>2015/01/01</pubDate>
+        <language>english</language>
+        <genre>Computer</genre>
+        <description>xml book description</description>
+        <imgSrc>/images/book1.jpg
+        </imgSrc>
+    </book>
+    <book>
+        <name>xml book 2</name>
+        <author>author 2</author>
+        <pubDate>2023/01/01</pubDate>
+        <language>arabic</language>
+        <genre>Computer</genre>
+        <description>xml book in arabic description</description>
+        <imgSrc>/images/book2.jpg
+        </imgSrc>
+    </book>
+    <book>
+        <name>xml book 2</name>
+        <author>author 2</author>
+        <pubDate>2023/01/01</pubDate>
+        <language>arabic</language>
+        <genre>Computer</genre>
+        <description>xml book in arabic description</description>
+        <imgSrc>/images/book2.jpg
+        </imgSrc>
+    </book>
+    <book>
+        <name>xml book 2</name>
+        <author>author 2</author>
+        <pubDate>2023/01/01</pubDate>
+        <language>arabic</language>
+        <genre>Computer</genre>
+        <description>xml book in arabic description</description>
+        <imgSrc>/images/book2.jpg
+        </imgSrc>
+    </book>
+    <book>
+        <name>xml book 2</name>
+        <author>author 2</author>
+        <pubDate>2023/01/01</pubDate>
+        <language>arabic</language>
+        <genre>Computer</genre>
+        <description>xml book in arabic description</description>
+        <imgSrc>/images/book2.jpg
+        </imgSrc>
+    </book>
+</books>
