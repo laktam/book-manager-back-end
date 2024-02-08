@@ -180,6 +180,11 @@ app.delete("/:bookName/:username", (req, res) => {
   }
 });
 
+app.get("/categories", (req, res) => {
+  const categories = getCategories();
+  res.send({ categories });
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
@@ -228,4 +233,17 @@ function writeJsonToXML(json) {
       console.log("XML file written successfully!");
     }
   });
+}
+
+function getCategories() {
+  const categoriesSet = new Set();
+  const json = getXMLAsJson();
+  const users = json.users.user;
+  for (const user of users) {
+    const books = user.books.book;
+    for (const book of books) {
+      categoriesSet.add(book.category);
+    }
+  }
+  return Array.from(categoriesSet);
 }

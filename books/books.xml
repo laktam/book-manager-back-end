@@ -5,7 +5,7 @@
         <author>author 1</author>
         <pubDate>2015/01/01</pubDate>
         <language>english</language>
-        <genre>Computer</genre>
+        <category>Computer</category>
         <description>xml book description</description>
         <imgSrc>/images/book1.jpg
         </imgSrc>
@@ -15,7 +15,7 @@
         <author>author 2</author>
         <pubDate>2023/01/01</pubDate>
         <language>arabic</language>
-        <genre>Computer</genre>
+        <category>Computer</category>
         <description>xml book in arabic description</description>
         <imgSrc>/images/book2.jpg
         </imgSrc>
@@ -25,7 +25,7 @@
         <author>author 2</author>
         <pubDate>2023/01/01</pubDate>
         <language>arabic</language>
-        <genre>Computer</genre>
+        <category>Computer</category>
         <description>xml book in arabic description</description>
         <imgSrc>/images/book2.jpg
         </imgSrc>
@@ -35,7 +35,7 @@
         <author>author 2</author>
         <pubDate>2023/01/01</pubDate>
         <language>arabic</language>
-        <genre>Computer</genre>
+        <category>Computer</category>
         <description>xml book in arabic description</description>
         <imgSrc>/images/book2.jpg
         </imgSrc>
@@ -45,7 +45,7 @@
         <author>author 2</author>
         <pubDate>2023/01/01</pubDate>
         <language>arabic</language>
-        <genre>Computer</genre>
+        <category>Computer</category>
         <description>xml book in arabic description</description>
         <imgSrc>/images/book2.jpg
         </imgSrc>
