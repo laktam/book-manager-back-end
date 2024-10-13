@@ -121,16 +121,20 @@ app.post("/login", (req, res) => {
   const json = parser.parse(xmlFile);
   const users = json.users.user;
   // console.log(users);
+  let userFound = false;
   for (const user of users) {
     if (
       user.username === requestData.username &&
       user.password == requestData.password
     ) {
       res.json({ status: true });
+      userFound = true;
       break;
     }
   }
-  res.json({ status: false });
+  if (!userFound) {
+    res.json({ status: false });
+  }
 });
 
 app.post("/signup", (req, res) => {
@@ -142,21 +146,23 @@ app.post("/signup", (req, res) => {
   const json = getXMLAsJson();
   const users = json.users.user;
   const responseData = {};
+  responseData.status = true; //true means signup successful
   for (const user of users) {
     if (user.username === username) {
       responseData.status = false;
       responseData.message = "username already exist";
       res.send(responseData);
       break;
-    } else {
-      responseData.status = true;
-      json.users.user.push({ username, email, password, books: { book: [] } });
-      //write to xml
-      writeJsonToXML(json);
-      res.send(responseData);
-      console.log("new user added");
-      break;
     }
+  }
+  //if we don't find a user with the same username
+  if (responseData.status) {
+    responseData.status = true;
+    json.users.user.push({ username, email, password, books: { book: [] } });
+    //write to xml
+    writeJsonToXML(json);
+    res.send(responseData);
+    console.log("new user added");
   }
 });
 
@@ -185,6 +191,9 @@ app.get("/categories", (req, res) => {
   res.send({ categories });
 });
 
+app.use("/transform", express.static("users/users.xml"));
+app.use("/xslt", express.static("xslt/books.xslt"));
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
@@ -194,7 +203,12 @@ app.listen(port, () => {
 //get users and transform book to book list if there is only one to facilitate for loops
 function getXMLAsJson() {
   const xmlFile = readFileSync(`./users/users.xml`, "utf8");
-  const parser = new XMLParser();
+  const options = {
+    format: true,
+    ignoreAttributes: false,
+    format: true,
+  };
+  const parser = new XMLParser(options);
   const json = parser.parse(xmlFile);
   const users = json.users.user;
   //if there is no users
@@ -223,8 +237,15 @@ function getXMLAsJson() {
 function writeJsonToXML(json) {
   //write to xml file
   // Convert the XML data object to XML string
-  const builder = new XMLBuilder(); //options
+  const options = {
+    format: true,
+    ignoreAttributes: false,
+    format: true,
+  };
+
+  const builder = new XMLBuilder(options);
   let xmlDataStr = builder.build(json);
+
   // Write the XML string to a file
   fs.writeFile("users/users.xml", xmlDataStr, function (err) {
     if (err) {

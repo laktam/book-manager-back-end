@@ -1,50 +1,166 @@
-<users>
-    <user>
-        <username>laktam</username>
-        <email>laktam@gmail.com</email>
-        <password>123456</password>
-        <description>jfdklsajfklds;ajkflsad jfkdls;a jkflsdaj klfds;aj klfasj klfsad</description>
-        <books>
-            <book>
-                <name>xml book 4</name>
-                <author>author 2</author>
-                <pubDate>2023/01/01</pubDate>
-                <language>arabic</language>
-                <category>Computer</category>
-                <description>xml book in arabic description</description>
-                <imgSrc>/images/book2.jpg</imgSrc>
-            </book>
-            <book>
-                <name>xml book 5</name>
-                <author>author 2</author>
-                <pubDate>2023/01/01</pubDate>
-                <language>arabic</language>
-                <category>Computer</category>
-                <description>xml book in arabic description</description>
-                <imgSrc>/images/book2.jpg</imgSrc>
-            </book>
-            <book>
-                <name>new xml book 25</name>
-                <author>ana</author>
-                <pubDate>20/20/02</pubDate>
-                <language>fr</language>
-                <category>sci-fi</category>
-                <description>fdsa</description>
-                <imgSrc>/images/1707343653881.jpg</imgSrc>
-            </book>
-        </books>
-    </user>
-    <user>
-        <username>abdellah laktam</username>
-        <email>laktam@gmail.com</email>
-        <password>123456</password>
-        <description>jfdklsajfklds;ajkflsad jfkdls;a jkflsdaj klfds;aj klfasj klfsad</description>
-        <books></books>
-    </user>
-    <user>
-        <username>useruseruser</username>
-        <email>fdsa</email>
-        <password>useruseruser</password>
-        <books></books>
-    </user>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="http://localhost:5000/xslt" type="text/xsl"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="users.xsd">
+  <user>
+    <username>laktam</username>
+    <email>laktam@gmail.com</email>
+    <password>123456</password>
+    <books>
+      <book>
+        <name>XML for dummies</name>
+        <author>Lucinda Dykes</author>
+        <pubDate>01/08/2005</pubDate>
+        <language>english</language>
+        <category>xml</category>
+        <description>See how XML works for business needs and RSS feeds
+
+          Create consistency on the Web, or tag your data for different purposes
+
+          Tag -- XML is it! XML tags let you share your format as well as your data, and this handy
+          guide will show you how. You&apos;ll soon be using this markup language to create
+          everything
+          from Web sites to business forms, discovering schemas and DOCTYPES, wandering the Xpath,
+          teaming up XML with Office 2003, and more.
+
+          Discover how to
+          * Make information portable
+          * Use XML with Word 2003
+          * Store different types of data
+          * Convert HTML documents to XHTML
+          * Add CSS to XML
+          * Understand and use DTDs</description>
+        <imgSrc>/images/book2.jpg</imgSrc>
+      </book>
+      <book>
+        <name>Learning XML</name>
+        <author>Erik Ray</author>
+        <pubDate>10/28/2003</pubDate>
+        <language>english</language>
+        <category>xml</category>
+        <description>This second edition of the bestselling Learning XML provides web developers
+          with a concise but grounded understanding of XML (the Extensible Markup Language) and its
+          potential-- not just a whirlwind tour of XML. The author explains the important and
+          relevant XML technologies and their capabilities clearly and succinctly with plenty of
+          real-life projects and useful examples. He outlines the elements of markup--demystifying
+          concepts such as attributes, entities, and namespaces--and provides enough depth and
+          examples to get started. Learning XML is a reliable source for anyone who needs to know
+          XML, but doesn&apos;t want to waste time wading through hundreds of web sites or 800 pages
+          of bloated text. For writers producing XML documents, this book clarifies files and the
+          process of creating them with the appropriate structure and format. Designers will learn
+          what parts of XML are most helpful to their team and will get started on creating Document
+          Type Definitions.</description>
+        <imgSrc>/images/1708094968681.jpg</imgSrc>
+      </book>
+      <book>
+        <name>XSLT</name>
+        <author>Doug Tidwell</author>
+        <pubDate>05/05/2008</pubDate>
+        <language>english</language>
+        <category>xml</category>
+        <description>After years of anticipation and delay, the W3C finally released the XSLT 2.0
+          standard in January 2007. The revised edition of this classic book offers practical,
+          real-world examples that demonstrate how you can apply XSLT stylesheets to XML data using
+          either the new specification, or the older XSLT 1.0 standard.
+
+          XSLT is a critical language for converting XML documents into other formats, such as HTML
+          code or a PDF file. With XSLT, you get a thorough understanding of XSLT and XPath and
+          their relationship to other web standards, along with recommendations for a honed toolkit
+          in an open platform-neutral, standards-based environment. This book:
+
+          Covers the XSLT basics, including simple stylesheets and methods for setting up
+          transformation engines
+          Walks you through the many parts of XSLT, particularly XSLT&apos;s template-based approach
+          to transformations
+          Applies both XSLT 1.0 and 2.0 solutions to the same problems, helping you decide which
+          version of XSLT is more appropriate for your project
+          Includes profuse examples that complement both the tutorial and the reference material
+          The new edition of XSLT has been updated thoroughly to explain XSLT 2.0&apos;s many
+          dependencies, notably XML Schema and XPath 2.0. Want to find out how the 2.0 specification
+          improves on the old? This book will explain.</description>
+        <imgSrc>/images/1708095290389.jpg</imgSrc>
+      </book>
+      <book>
+        <name>learning Java</name>
+        <author>Marc Loy</author>
+        <pubDate>16/08/2023</pubDate>
+        <language>english</language>
+        <category>Java</category>
+        <description>Ideal for working programmers new to Java, this best-selling book guides you through the language features and APIs of Java 21. Through fun, compelling, and realistic examples, authors Marc Loy, Patrick Niemeyer, and Dan Leuck introduce you to Java&apos;s fundamentals, including its class libraries, programming techniques, and idioms, with an eye toward building real applications.
+
+
+This updated sixth edition expands the content to continue covering lambdas and streams, and shows you how to use a functional paradigm in Java. You&apos;ll learn about the latest Java features introduced since the book&apos;s fifth edition, from JDK 15 through 21. You&apos;ll also take a deep dive into virtual threads (introduced as Project Loom in Java 19).</description>
+        <imgSrc>/images/1708097075574.jpg</imgSrc>
+      </book>
+      <book>
+        <name>new book</name>
+        <author>new author</author>
+        <pubDate>15/2/2000</pubDate>
+        <language>english</language>
+        <category>xml</category>
+        <description>jdsfakl fdsjkla</description>
+        <imgSrc>/images/1708123847895.jpg</imgSrc>
+      </book>
+    </books>
+  </user>
+  <user>
+    <username>abdellah laktam</username>
+    <email>laktam@gmail.com</email>
+    <password>123456</password>
+    <books></books>
+  </user>
+  <user>
+    <username>abdellah</username>
+    <email>abdellah.laktam@usmba.ac.ma</email>
+    <password>123456</password>
+    <books>
+      <book>
+        <name>Clean code</name>
+        <author>Robert C. Martin</author>
+        <pubDate>01/08/2008</pubDate>
+        <language>english</language>
+        <category>programming</category>
+        <description>Noted software expert Robert C. Martin, presents a revolutionary paradigm with
+          Clean Code: A Handbook of Agile Software Craftsmanship. Martin, who has helped bring agile
+          principles from a practitioner’s point of view to tens of thousands of programmers, has
+          teamed up with his colleagues from Object Mentor to distill their best agile practice of
+          cleaning code “on the fly” into a book that will instill within you the values of software
+          craftsman, and make you a better programmer―but only if you work at it.</description>
+        <imgSrc>/images/1708083940150.jpg</imgSrc>
+      </book>
+      <book>
+        <name>The Pragmatic Programmer</name>
+        <author>Andrew Hunt</author>
+        <pubDate>01/01/1999</pubDate>
+        <language>english</language>
+        <category>programming</category>
+        <description>Ward Cunningham Straight from the programming trenches, The Pragmatic
+          Programmer cuts through the increasing specialization and technicalities of modern
+          software development to examine the core process--taking a requirement and producing
+          working, maintainable code that delights its users. It covers topics ranging from personal
+          responsibility and career development to architectural techniques for keeping your code
+          flexible and easy to adapt and reuse. Read this book, and you’ll learn how to Fight
+          software rot; Avoid the trap of duplicating knowledge; Write flexible, dynamic, and
+          adaptable code; Avoid programming by coincidence; Bullet-proof your code with contracts,</description>
+        <imgSrc>/images/1708093435933.jpg</imgSrc>
+      </book>
+      <book>
+        <name>Design Patterns</name>
+        <author>Erich Gamma</author>
+        <pubDate>31/10/1994</pubDate>
+        <language>english</language>
+        <category>programming</category>
+        <description>Capturing a wealth of experience about the design of object-oriented software,
+          four top-notch designers present a catalog of simple and succinct solutions to commonly
+          occurring design problems. Previously undocumented, these 23 patterns allow designers to
+          create more flexible, elegant, and ultimately reusable designs without having to
+          rediscover the design solutions themselves.
+          The authors begin by describing what patterns are and how they can help you design
+          object-oriented software. They then go on to systematically name, explain, evaluate, and
+          catalog recurring designs in object-oriented systems. With Design Patterns as your guide,
+          you will learn how these important patterns fit into the software development process, and
+          how you can leverage them to solve your own design problems most efficiently.</description>
+        <imgSrc>/images/1708093543341.jpg</imgSrc>
+      </book>
+    </books>
+  </user>
 </users>

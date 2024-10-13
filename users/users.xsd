@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="user">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="username" type="xsd:string" />
+                <xsd:element name="email" type="xsd:string" />
+                <xsd:element name="password" type="xsd:string" />
+                <xsd:element ref="books" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="users">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="user" minOccurs="0" maxOccurs="unbounded" />
+
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="book">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="name" type="xsd:string" />
+                <xsd:element name="author" type="xsd:string" />
+                <xsd:element name="pubDate" type="xsd:string" />
+                <xsd:element name="language" type="xsd:string" />
+                <xsd:element name="category" type="xsd:string" />
+                <xsd:element name="description" type="xsd:string" />
+                <xsd:element name="imgSrc" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="books">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="book" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
